@@ -10,3 +10,57 @@ h1{
 {
  color: bluevioletg;
 }
+/* Attribute Selector */
+a[href^="https://"]
+{
+  color: yellow;
+}
+a[href$=".jpg"]
+{
+  color: maroon;
+}
+a[href*="/"]
+{
+  color: brown;
+}
+img[src^="https://"]
+{
+  border: 5px solid gray; 
+}
+/* Pseudo Selector */
+/* elementName:pseudoProperty{...} */
+#ordered-list :first-child
+{
+ color: blue;
+}
+.Unordered-listitem :first-child
+{
+color: red;
+}
+
+.Unordered-listitem :last-child
+{
+  color: blue;
+}
+.mypara:hover
+{
+  color: blue;
+}
+                /* COLOR GRADIENTS */
+/*                     Color Gradients
+Colors in css can be defined in 3 ways
+1.)Name Color
+2.)Hex Code
+3.)rgb()
+ */
+ h1{
+  color: #1a0a4f;
+ }
+#container-one
+{
+  color: teal;
+  width: 400px;
+  height: 400px;
+  /* background: linear-gradient(50deg , red, yellow,blue, green,pink); */
+  background: linear-gradient( to bottom right, red, yellow,blue, green,pink)
+}
