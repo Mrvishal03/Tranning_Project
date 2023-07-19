@@ -2,21 +2,19 @@
 <html> 
     <!-- Meta Data of the Document -->
     <head>
-   
-        <!--  <style>
-        h1
-        {
-           color: blue; 
-        }
-        p
-        {
-            color: gray;
-        } </style> -->
-
-        <!-- External CSS (Use style.css) -->
-        <link rel="stylesheet" href="style.css">
+        <!-- 2. Internal CSS (use style as an element) -->
+        <!-- <style>
+            /* selector { cssProperty: cssValue; } */
+            h1 {
+                color: blue;
+            }
+            p {
+                color: gray;
+            }
+        </style> -->
+        <!-- 3. External CSS (use style.css file as an stylesheet) -->
+        <link rel="stylesheet" href="./style.css">
         <title>HTML Basics - </title>
-        
     </head>
     <body>
         <!-- PLAIN TEXT :- This is a sample text. This is a change. Another change
@@ -24,8 +22,12 @@
         <!-- HTML5 Block Level Elements -> All the HTML elemensts have some default styles. -->
         <!-- Heading Elements (h1 - h6) -> textSize(h1) > textSize(h6) -->
         <!-- <h1 style="cssProperty: cssValue;">Introduction to HTML</h1> -->
+
         <!-- 1. Inline CSS (use style as an attribute) -->
+        <!-- 2. Internal CSS (use style as an element) -->
+
         <h1 id="heading-one">Introduction to HTML</h1>
+        <hr />
         <!-- <h2>Heading - 2</h2>
         <h3>Heading - 3</h3>
         <h4>Heading - 4</h4>
@@ -33,32 +35,31 @@
         <h6>Heading - 6</h6> -->
 
         <!-- Paragraphs -->
-        <p class="mypara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ad <b>fugit nam aliquid</b> tempore dolores aspernatur possimus. Aliquam ipsa laudantium ea. <br /> Ducimus, nam nesciunt. <i>Distinctio suscipit</i> optio consectetur officiis dolor placeat hic! Nobis expedita, eveniet <span style="background-color: yellow;">veniam voluptatibus amet</span>, cumque corporis illum enim ipsa dolores et architecto fugit sequi deserunt consectetur quasi optio ducimus voluptatum excepturi, quo quis? Dignissimos, vel blanditiis?</p>  <br/>
+        <p style="color: red;" id="heading-one" class="myPara" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ad <b>fugit nam aliquid</b> tempore dolores aspernatur possimus. Aliquam ipsa laudantium ea. <br /> Ducimus, nam nesciunt. <i>Distinctio suscipit</i> optio consectetur officiis dolor placeat hic! Nobis expedita, eveniet <span style="background-color: yellow;">veniam voluptatibus amet</span>, cumque corporis illum enim ipsa dolores et architecto fugit sequi deserunt consectetur quasi optio ducimus voluptatum excepturi, quo quis? Dignissimos, vel blanditiis?</p> 
 
-        <p class="mypara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ad <b>fugit nam aliquid</b> tempore dolores aspernatur possimus. Aliquam ipsa laudantium ea. <br /> Ducimus, nam nesciunt. <i>Distinctio suscipit</i> optio consectetur officiis dolor placeat hic! Nobis expedita, eveniet <span style="background-color: yellow;">veniam voluptatibus amet</span>, cumque corporis illum enim ipsa dolores et architecto fugit sequi deserunt consectetur quasi optio ducimus voluptatum excepturi, quo quis? Dignissimos, vel blanditiis?</p>   <br/>
+        <p class="myPara">Lorem, ipsum dolor sit amet <u>consectetur adipisicing elit</u>. Repellat nobis ratione iusto unde minus porro impedit architecto adipisci amet facilis quasi, molestias quam maxime ad!</p>
 
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ad <b>fugit nam aliquid</b> tempore dolores aspernatur possimus. Aliquam ipsa laudantium ea. <br /> Ducimus, nam nesciunt. <i>Distinctio suscipit</i> optio consectetur officiis dolor placeat hic! Nobis expedita, eveniet <span style="background-color: yellow;">veniam voluptatibus amet</span>, cumque corporis illum enim ipsa dolores et architecto fugit sequi deserunt consectetur quasi optio ducimus voluptatum excepturi, quo quis? Dignissimos, vel blanditiis?</p>  <br/>
+        <p class="myPara">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati asperiores eligendi adipisci sed possimus beatae, reiciendis voluptate ut facilis corrupti dolores, quis excepturi est. Nam dolore omnis obcaecati? Distinctio eligendi enim fuga eos incidunt aperiam aut ad quo? Velit, nostrum laudantium eligendi magni aperiam optio.</p>
 
-        <p class="mypara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ad <b>fugit nam aliquid</b> tempore dolores aspernatur possimus. Aliquam ipsa laudantium ea. <br /> Ducimus, nam nesciunt. <i>Distinctio suscipit</i> optio consectetur officiis dolor placeat hic! Nobis expedita, eveniet <span style="background-color: yellow;">veniam voluptatibus amet</span>, cumque corporis illum enim ipsa dolores et architecto fugit sequi deserunt consectetur quasi optio ducimus voluptatum excepturi, quo quis? Dignissimos, vel blanditiis?</p>  <br/>
-
+        <p class="myPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem voluptatum minima quasi quibusdam hic blanditiis! Corrupti dolores et recusandae ratione nostrum consectetur ab aliquam quod? Alias nostrum totam quos minus!</p>
+    
 
     <h3>Lists - </h3>
     <!-- Ordered List (ol) -->
-
-    <ol id="ordered-list" type="i">
-        <li>Item - 1</li>
-        <li>Item - 2</li>
-        <li>Item - 3</li>
-        <li>Item - 4</li>
-        <li>Item - 5</li>
+    <ol type="i">
+        <li class="ordered-list-item">Item - 1</li>
+        <li class="ordered-list-item">Item - 2</li>
+        <li class="ordered-list-item">Item - 3</li>
+        <li class="ordered-list-item">Item - 4</li>
+        <li class="ordered-list-item">Item - 5</li>
     </ol>
     <!-- Unordered List (ul) -->
     <ul>
-        <li class="Unordered-listitem">Item - 1</li>
-        <li class="Unordered-listitem">Item - 2</li>
-        <li class="Unordered-listitem">Item - 3</li>
-        <li class="Unordered-listitem">Item - 4</li>
-        <li class="Unordered-listitem">Item - 5</li>
+        <li class="unordered-list-item">Item - 1</li>
+        <li class="unordered-list-item">Item - 2</li>
+        <li class="unordered-list-item">Item - 3</li>
+        <li class="unordered-list-item">Item - 4</li>
+        <li class="unordered-list-item">Item - 5</li>
     </ul>
 
     <hr />
@@ -75,21 +76,36 @@
     <p>click <a href="./second.html">here</a> to visit to Page 2</p>
 
     <hr />
-    <div id="container-one"> 
 
-    </div>
-    <hr>
+     <div id="container">
+        <div class="container-items">A</div>
+        <div class="container-items">B</div>
+        <div class="container-items">C</div>
+        <div class="container-items">D</div>
+        <div class="container-items">E</div>
+        <div class="container-items">F</div>
+        <div class="container-items">G</div>
+        <div class="container-items">H</div>
+        <div class="container-items">I</div>
+        <div class="container-items">I</div>
+        <div class="container-items">J</div>
+        <div class="container-items">K</div>
+        <div class="container-items">L</div>
+        <div class="container-items">M</div>
+     </div>
+
+    <hr />
 
     <!-- Self Ending Elements -->
-    <h1>Images - </h1>
-    <img src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg" alt="Image One" />
+    <h3>Images - </h3>
+    <img id="img-one" src="https://static.remove.bg/sample-gallery/graphics/bird-thumbnail.jpg" alt="Image One" />
     <hr />
-    <img src="./assets/gfx100s_sample_04_thum-1.jpg" alt="Image - 2" />
+    <img src="../HTML/assets/pictures/gfx100s_sample_04_thum-1.jpg" alt="Image - 2" />
 
     <hr>
 
     <h3>Tables - </h3>
-     <table border="2">
+     <table border="1">
         <tr>
             <!-- <td><b>Emp_id</b></td> -->
             <th>Emp_ID</th>
@@ -120,48 +136,56 @@
 
      <hr />
 
+     <div id="container-two"></div>
+     <hr />
+     <div id="container-three"></div>
+     <hr />
+     <div id="container-four"></div>
+     <hr />
+
      <h3>HTML Signup Forms - </h3>
      <form action="https://www.myBE.php/">
         <!-- <span>Your Name : </span><input type=""  /> -->
-        <div>
-            <label>Email :</label>
-            <input type="text" placeholder="enter your name..." /> 
+        <div class="form-item" style="width:90%">
+            <input id="form-name" type="text" placeholder="enter your name..." /> 
         </div>
         <!-- Email :- username@hostname.com -->
-        <div>
-            <input type="email" placeholder="enter your email..." />
+        <div class="form-item" style="width:90%">
+            <input id="form-email" type="email" placeholder="enter your email..." />
         </div>
-         <div>
-            <input type="password" placeholder="enter your password..." /> 
+         <div class="form-item" style="width:90%">
+            <input id="form-pwd" type="password" placeholder="enter your password..." /> 
          </div>
-        <div>
+        <div class="form-item">
+            <label>Date of Birth - </label>
             <input type="date" /> 
         </div>
-        <div>
+        <div class="form-item">
+            <label>How well do you feel? - </label>
             <input type="range" />
         </div> 
         <label>Enter you gender - </label> 
         <!-- <input type="checkbox" /> Male <br />
         <input type="checkbox" /> Female <br />
         <input type="checkbox" /> Others <br /> -->
-        <div>
+        <div class="form-item">
             <select>
                 <option>Male</option>
                 <option>Female</option>
                 <option>Others</option>
             </select> 
         </div>
-        <div>
+        <div class="form-item">
             <label>Upload you CV - </label>
             <input type="file" /> 
         </div>
-        <div>
+        <div class="form-item">
             <input type="color" /> 
         </div>
-        <div>
+        <div class="form-item">
             <button onclick="console.log('Btn was clicked!')">Click Me!</button>
         </div>
-        <div>
+        <div class="form-item">
             <input type="submit" value="Sign Up" />
         </div>
      </form>
@@ -213,7 +237,7 @@
         </main>
         <footer></footer>
      </div>
-
+     
     <div style="height: 250px;"></div>
 </body>
 </html>

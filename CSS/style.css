@@ -1,66 +1,167 @@
-/* 1.selectors */
-h1{
-    color: rgb(255, 102, 0);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+/* 1. Selectors */
+body {
+    background: linear-gradient(to bottom, rgba(162, 193, 242, 1), rgba(162, 193, 242, 0));
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
 }
-#heading-one
-{
-  color: aquamarine;
+/* selector { cssProperty: cssValue; } */
+/* a.) Element Selector - Selects element based on the name */
+h1 {
+    color: blue;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 10px 10px 5px black, -10px -10px 5px red;
 }
-.mypara
-{
- color: bluevioletg;
+/* b.) id Selector - Selects the element based on the id. */
+/* #heading-one:hover {
+    color: green;
+} */
+/* c.) class Selector - Selects the elements based on the class name */
+/* #para-one, #para-two, #para-four {
+    color: gray;
+} */
+.myPara {
+    color: gray;
 }
-/* Attribute Selector */
-a[href^="https://"]
-{
-  color: yellow;
+/* d.) Attribute Slector */
+/* elementName[attributeName condition] */
+/* I want to find the <a> whose href starts with https:// */
+/* ^ -> Starts with
+$ -> Ends with
+* -> contains */
+a {
+    text-decoration: line-through;
 }
-a[href$=".jpg"]
-{
-  color: maroon;
+a[href^="https://"] {
+    color: yellow;
 }
-a[href*="/"]
-{
-  color: brown;
+a[href$=".jpg"] {
+    color: maroon;
 }
-img[src^="https://"]
-{
-  border: 5px solid gray; 
+a[href*="/"] {
+    color: red;
 }
-/* Pseudo Selector */
-/* elementName:pseudoProperty{...} */
-#ordered-list :first-child
-{
- color: blue;
+img[src^="../"] {
+    border: 10px solid gray;
+} 
+/* e.) Pseudo Selectors */
+/* elementName: pseudoProperty { ... } */
+ol:first-child {
+    color: red;
 }
-.Unordered-listitem :first-child
-{
-color: red;
+li:first-child {
+    color: green;
+}
+.ordered-list-item:last-child {
+    color: red;
+}
+.unordered-list-item:first-child {
+    color: blue;
+}
+.ordered-list-item:nth-child(3) {
+    color: yellow;
 }
 
-.Unordered-listitem :last-child
-{
-  color: blue;
+/* Units of Measurements */
+/* 1. Absolute Unit (px, cm, mm, inc, ... ), 2. Relative Unit (em) */
+p {
+    /* font-size: 18px ; */
+    font-size: 1.1em; 
+    /* font-size: 5cm; */
 }
-.mypara:hover
-{
-  color: blue;
+
+img {
+    height: 720px;
+    width: 75%;
 }
-                /* COLOR GRADIENTS */
-/*                     Color Gradients
-Colors in css can be defined in 3 ways
-1.)Name Color
-2.)Hex Code
-3.)rgb()
- */
- h1{
-  color: #1a0a4f;
- }
-#container-one
-{
-  color: teal;
-  width: 400px;
-  height: 400px;
-  /* background: linear-gradient(50deg , red, yellow,blue, green,pink); */
-  background: linear-gradient( to bottom right, red, yellow,blue, green,pink)
+
+/* BOX MODEL */
+#form-email, #form-name, #form-pwd {
+    width: 100%;
+}
+
+.form-item {
+    margin: 8px;
+}
+
+form {
+    /* border: widthOfBorder style color; */
+    /* style :- 1. solid, 2. dotted, 3. dashed, 4. double */
+    border: 3px solid gray;
+    
+    /* 
+    padding: a-px;
+    padding: a-px b-px; a -> top-bottom | b -> left-right
+    padding: a-px b-px c-px d-px; a -> top | b -> right | c -> bottom | d -> left 
+    */
+    padding: 10px;
+    padding: 10px 5px;
+    padding-top: 5px; padding-right: 10px; padding-bottom: 15px; padding-left: 20px;
+    padding: 5px 10px 15px 20px;
+
+    margin: 10px;
+    margin: 10px 5px;
+    margin: 5px 10px 15px 20px;
+
+    /* NOTE:- padding & margin are both parent properties -> they also have sub-properties associated w them. */
+    /* padding-left:; padding-right:; padding-top:; padding-bottom:; margin-top:; margin-bottom:; margin-left:; margin-right:; */
+}
+
+/* background: */
+#container-two {
+    width: 65%;
+    height: 500px;
+    /* NOTE:- background is a parent property */
+    /* background: red; */
+    background: url('https://cdn.wallpapersafari.com/13/84/wlZ31L.jpg');
+    /* background-repeat: no-repeat; */
+    /* background-color: green; */
+    /* background-size: 100%; background-size: auto; background-size: cover; */
+    background-size: cover;
+}
+
+/* Gradients - 1. Linear Gradient, 2. Radial Gradients */
+#container-three {
+    width: 65%;
+    height: 400px;
+
+    /* NOTE :- If no direction is provided, default is top to bottom | Directions :- bottom, top, left, right */
+    /* background: linear-gradient(direction, black, red, blue, green, yellow, white); */
+    /* background: linear-gradient(to left, black, red, blue, green, yellow, white); */
+
+    /* NOTE :- You can specify the directions usinh deg values (0deg) starts from bottom, reaches to top */
+    background: linear-gradient(360deg, black, red, blue, green, yellow, white);
+
+    /* 
+    COLORS :-
+    1. Named Colors     2. HEX Code     3. RBG() -> rgb(red, green, blue)   4. RGBA() -> rgb(red, green, blue, absolute) -> abs [0-1]; 
+    */
+}
+
+#container-four {
+    width: 400px;
+    height: 400px;
+
+    background: radial-gradient(circle, black 10%, red 20%, blue 25%, green 30%, yellow 80%, white 90%);
+}
+
+/* Fonts and Font-Family */
+
+/* CSS Flex Box */
+#container {
+    display: flex;
+    /* flex-direction: row(default), column, row-reverse, column-reverse; */
+    flex-wrap: wrap;
+    /* justify-content: flex-start, flex-end, center; */
+    justify-content: space-around;
+}
+.container-items {
+    width: 100px;
+    height: 100px;
+    font-size: 6em;
+    text-align: center;
+    background: green;
+    color: white;
+    margin: 15px;
 }
