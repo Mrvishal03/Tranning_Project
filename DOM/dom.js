@@ -107,27 +107,33 @@
 // }, 3000 )
 // console.log('Code after setTimeout')
 
-Keyboard Events
+// Keyboard Events
 
-document.getElementById('text-input').addEventListener('copy', () => { 
-    console.log('Data was Copied') })
-document.getElementById('text-input').addEventListener('cut', () => { 
-    console.log('data was cut') })
-document.getElementById('text-input').addEventListener('paste', () => { 
-    console.log('data was paste') })
+// document.getElementById('text-input').addEventListener('copy', () => { 
+//     console.log('Data was Copied') })
+// document.getElementById('text-input').addEventListener('cut', () => { 
+//     console.log('data was cut') })
+// document.getElementById('text-input').addEventListener('paste', () => { 
+//     console.log('data was paste') })
 
-    document.getElementById('text-input').addEventListener('keyup', () => { 
-        console.log('Key Up') })
+//     document.getElementById('text-input').addEventListener('keyup', () => { 
+//         console.log('Key Up') })
 
-        document.getElementById('text-input').addEventListener('keydown', () => { 
-            console.log('key down') })
-
-
-            document.getElementById('text-input').addEventListener('keypress', () => { 
-                console.log('key pressed') })
+//         document.getElementById('text-input').addEventListener('keydown', () => { 
+//             console.log('key down') })
 
 
-document.getElementById('text-input').addEventListener('keypress', (e) => { 
- console.log(e) })
+//             document.getElementById('text-input').addEventListener('keypress', () => { 
+//                 console.log('key pressed') })
 
 
+// document.getElementById('text-input').addEventListener('keypress', (e) => { 
+//  console.log(e.target.value) })
+
+
+
+//  ALTERNATIVE
+document.getElementById('submitBtn').addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log( document.getElementById('text-input').value )
+})
