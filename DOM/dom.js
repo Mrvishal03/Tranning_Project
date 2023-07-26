@@ -84,25 +84,50 @@
 // element.addEventListner( eventName, () => {} )
 // element.addEventListner( eventName, fuctionName )
 
-document.getElementById('btn').addEventListener( 'click', (event) => {
-    console.log(event)
-    console.log('Button is clicked!')
-} )
-document.getElementById('btn').addEventListener( 'dblclick', () => {
-    console.log('Button is double clicked!')
-} )
+// document.getElementById('btn').addEventListener( 'click', (event) => {
+//     console.log(event)
+//     console.log('Button is clicked!')
+// } )
+// document.getElementById('btn').addEventListener( 'dblclick', () => {
+//     console.log('Button is double clicked!')
+// } )
 
-document.getElementById('submitBtn').addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log('Subit Button was Clicked!')
-})
+// document.getElementById('submitBtn').addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log('Subit Button was Clicked!')
+// })
 
-document.getElementById('text-input').addEventListener('mouseenter', () => { console.log('Cursror entered the element') })
-document.getElementById('text-input').addEventListener('mouseleave', () => { console.log('Cursror left the element') })
+// document.getElementById('text-input').addEventListener('mouseenter', () => { console.log('Cursror entered the element') })
+// document.getElementById('text-input').addEventListener('mouseleave', () => { console.log('Cursror left the element') })
+
+ 
 
 // setTimeout( () => {
 //     console.log('Callback was executed...')
 // }, 3000 )
 // console.log('Code after setTimeout')
 
-// Keyboard Events
+Keyboard Events
+
+document.getElementById('text-input').addEventListener('copy', () => { 
+    console.log('Data was Copied') })
+document.getElementById('text-input').addEventListener('cut', () => { 
+    console.log('data was cut') })
+document.getElementById('text-input').addEventListener('paste', () => { 
+    console.log('data was paste') })
+
+    document.getElementById('text-input').addEventListener('keyup', () => { 
+        console.log('Key Up') })
+
+        document.getElementById('text-input').addEventListener('keydown', () => { 
+            console.log('key down') })
+
+
+            document.getElementById('text-input').addEventListener('keypress', () => { 
+                console.log('key pressed') })
+
+
+document.getElementById('text-input').addEventListener('keypress', (e) => { 
+ console.log(e) })
+
+
