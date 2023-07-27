@@ -133,16 +133,42 @@
 
 
 //  ALTERNATIVE
-document.getElementById('submitBtn').addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log( document.getElementById('text-input').value )
-})
+// document.getElementById('submitBtn').addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log( document.getElementById('text-input').value )
+// })
  
 // FUN ACTIVITY
-document.querySelector('#container-box').addEventListener('mouseenter', (e) => {
-    console.log(e);
-    document.querySelector('#container-box').style.backgroundColor = `rgb(0, ${e.offsetX}, ${e.offsetY})`
-})
-document.querySelector('#container-box').addEventListener('mouseleave', (e) => {
-    document.querySelector('#container-box').style.backgroundColor = `rgb(100, ${e.offsetX}, ${e.offsetY})`   
+// document.querySelector('#container-box').addEventListener('mouseenter', (e) => {
+//     console.log(e);
+//     document.querySelector('#container-box').style.backgroundColor = `rgb(0, ${e.offsetX}, ${e.offsetY})`
+// })
+// document.querySelector('#container-box').addEventListener('mouseleave', (e) => {
+//     document.querySelector('#container-box').style.backgroundColor = `rgb(100, ${e.offsetX}, ${e.offsetY})`   
+// })
+
+
+
+// DOM Relation
+// DOM Traversal
+
+
+
+
+// Sibling
+// console.log(document.getElementById('head').previousElementSibling)
+
+
+
+// console.log(document.getElementById('head').nextElementSibling)
+  
+
+// Item Lister application
+document.getElementById('submitBtn').addEventListener('click', (e) => {
+    e.preventDefault()
+    const text = document.getElementById('text-input').value
+    const newLi = document.createElement('li')
+    newLi.textContent = text
+    newLi.setAttribute('class', 'list-group-item')
+    document.getElementById('items').appendChild(newLi)
 })
